@@ -1,0 +1,4 @@
+{{ object.project_name }}
+{{ object.project_description }}
+{{ object.project_write_up }}
+{{ object.user.get_full_name }}

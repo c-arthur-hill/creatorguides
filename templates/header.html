@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block top %}
+<div id="container">
+	<div id="content">
+                <div class="column_middle">
+			<div id="logo_full" class="thick_underline">
+				<a href="{{ SITE_URL }}guides/"><span class="full_link"></span></a>
+				<span>creator</span><span class="bold">guides</span>
+			</div>
+			{% block content %}
+			{% endblock %}
+		</div>
+	</div>
+<div>
+{% endblock %}

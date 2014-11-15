@@ -1,0 +1,32 @@
+{% extends "nav.html" %}
+{% block title %}SciGuides{% endblock %}
+{% block content %}
+	<div class="home">
+		<div class="start">
+			<h3>What?</h3>
+			<p>SciGuides visually explain where formulas come from and how they work.</div>
+		<div class="cta">
+			<a href="{{ SITE_URL }}guides/"><span class="full_link"></span></a>
+                        <div>
+				<object data='{{ STATIC_URL }}cta.svg' type='image/svg+xml'>Try A Free Guide Now!</object>
+                        </div>		
+		</div>
+		<div class="clear_both">
+			<div class="benefits">
+				<h3>Understand Faster</h3>
+				<p>Each guide is like a comic strip. Pictures and captions are easier to understand than dense math textbooks.</p>
+			</div>
+			<div class="benefits">
+				<h3>Understand Deeper</h3>
+				<p> We always forgot the formulas. We too had trouble figuring out how to apply what we learned to those darn word problems. So we found a better way.</p>
+			</div>
+			<div class="benefits">
+				<h3>Remember Longer</h3>
+				<p>Do you remember how to get to your elementary school, but you still forget your zip code? Because the guides are visual directions, they are easier to remember.</p>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block header %}<meta name="description" content="Learn Science Visually"><meta content="{{ STATIC_URL }}logo.png" property="og:image">
+{% endblock %}

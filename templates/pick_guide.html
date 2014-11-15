@@ -1,0 +1,36 @@
+{% extends "guide.html" %}
+
+{% block content %}
+	<div class="left_third">
+		{% for guide in guide_list_1 %}
+			<div class='guide_description'>
+                                <h2>{{guide.guide_name}}</h2>				
+				<a href='{{ SITE_URL }}guides/{{ guide.guide_page }}/'><span class='full_link'></span></a>
+                                <object data='{{ STATIC_URL }}{{ guide.guide_graphic_name }}.svg' type='image/svg+xml'>Guide graphic load failed.</object>
+			</div>
+		{% endfor %}
+	</div>
+	<div class="left_third">
+		{% for guide in guide_list_2 %}
+			<div class='guide_description'>
+                                <h2>{{guide.guide_name}}</h2>			
+				<a href='{{ SITE_URL }}guides/{{ guide.guide_page }}/'><span class='full_link'></span></a>
+			        <object data='{{ STATIC_URL }}{{ guide.guide_graphic_name }}.svg' type='image/svg+xml'>Guide graphic load failed.</object>
+			</div>
+		{% endfor %}
+	</div>
+	<div class="left_third">
+		{% for guide in guide_list_3 %}
+			<div class='guide_description'>
+                                <h2>{{guide.guide_name}}</h2>				
+				<a href='{{ SITE_URL }}guides/{{ guide.guide_page }}/'><span class='full_link'></span></a>
+				<object data='{{ STATIC_URL }}{{ guide.guide_graphic_name }}.svg' type='image/svg+xml'>Guide graphic load failed.</object>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}
+
+{% block header %}<meta name="description" content="Learn Science Visually"><meta content="{{ STATIC_URL }}logo.png" property="og:image">
+{% endblock %}
+
+{% block title %}SciGuides{% endblock %}

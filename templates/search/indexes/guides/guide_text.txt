@@ -1,0 +1,3 @@
+{ object.guide_name }}
+{{ object.guide_description }}
+{{ object.guide_content }}

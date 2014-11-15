@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block nav %}
+	<div id="container">
+		<div id="content">
+				<div class="site_bar">
+					<div class="headline">
+						<h1><a href="{{ SITE_URL }}" class="white_link"><strong>Sci</strong>Guides</a></h1>
+					</div>
+					<div class="nav">
+						<ul>
+							<li {% block home_link %}{% endblock %}><a href="{{ SITE_URL }}">Home</a></li>
+							<li {% block guide_link %}{% endblock %}><a href="{{ SITE_URL }}guides/">Guides</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="clear_both">
+					<!-- Go to www.addthis.com/dashboard to customize your tools -->
+					<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-542af0092639160b" async></script>
+					<div class="column_middle">
+						{% block content %}
+						{% endblock %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
